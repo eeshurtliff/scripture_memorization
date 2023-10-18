@@ -12,26 +12,27 @@ class Word {
     
     public Word(string word){
         _JTPgivenWord = word;
+        _isDisplayable = true;
+    }
+    public override string ToString()
+    {
+        if (_isDisplayable)
+        {
+            return _JTPgivenWord;
+        }
+        else
+        {
+            return new string('_', _JTPgivenWord.Length);
+        }
+    }
+    public void Hide()
+    {
+        _isDisplayable = false;
     }
 
-    public void Set_isDisplayable(bool chosenBoolean){
-        _isDisplayable = chosenBoolean;
+    // Check if the word is hidden
+    public bool IsHidden()
+    {
+        return !_isDisplayable;
     }
-    
-    public void JTPSet_isDisplayable(wordname){
-        if (JTPgivenWord==" ___ "){
-            bool boolword= true;
-        }
-        else {
-            bool boolword = false;
-        };
-        return boolword;
-    }
-    public ChangeWord(wordname, wordbool){
-        if (wordbool==false){
-            wordname=" ___ ";
-        }
-        return wordname
-    }
-
 }
