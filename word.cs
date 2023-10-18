@@ -1,5 +1,5 @@
 using System;
 
-class Words {
+class Word {
 
 }
