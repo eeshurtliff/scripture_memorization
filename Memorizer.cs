@@ -8,6 +8,10 @@ class Memorizer {
         _eesNumToHide = 2;
     }
 
+    public Memorizer(int numToHide){
+        _eesNumToHide = numToHide;
+    }
+
     public void EesUpdateVerse(_eesNumToHide){
         Random eesRandom = new Random();
         List<string> eesVerse = Scripture.GetVerse();

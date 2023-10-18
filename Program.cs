@@ -29,8 +29,9 @@ class Program {
         // Ask the user for the number of words hidden each time they press enter.
         Console.Write("Specify the hidden word count for each memorization round. (ex. '3'): ");
         string khHiddenWordCount = Console.ReadLine();
+        int khNumberHiddenWords = int.Parse(khHiddenWordCount);
 
-        Memorizer khMainMemorizer = new Memorizer();
+        Memorizer khMainMemorizer = new Memorizer(khNumberHiddenWords);
 
         // Pass information to finished Memorizer class method here.
     }
