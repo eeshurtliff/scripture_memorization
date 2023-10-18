@@ -18,7 +18,7 @@ class Memorizer {
         for (int i = 0; i < _eesNumToHide + 1; i++){
             int eesHideIndex = eesRandom.Next(eesVerse.Count);
             Word.Set_isDisplayable(false);
-            _eesHiddenIndexes.Add(eesHideIndex)
+            _eesHiddenIndexes.Add(eesHideIndex);
         }
     }
 
