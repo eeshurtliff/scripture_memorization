@@ -68,3 +68,10 @@ C:\Users\garfu\OneDrive\Documents\GitHub\scripture_memorization\obj\Debug\net7.0
 C:\Users\garfu\OneDrive\Documents\GitHub\scripture_memorization\obj\Debug\net7.0\Sandbox.pdb
 C:\Users\garfu\OneDrive\Documents\GitHub\scripture_memorization\obj\Debug\net7.0\Sandbox.genruntimeconfig.cache
 C:\Users\garfu\OneDrive\Documents\GitHub\scripture_memorization\obj\Debug\net7.0\ref\Sandbox.dll
+C:\Users\Emma\OneDrive\Documents\cse210-projects-ees\prove\scripture_memorization\obj\Debug\net7.0\Sandbox.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emma\OneDrive\Documents\cse210-projects-ees\prove\scripture_memorization\obj\Debug\net7.0\Sandbox.AssemblyInfoInputs.cache
+C:\Users\Emma\OneDrive\Documents\cse210-projects-ees\prove\scripture_memorization\obj\Debug\net7.0\Sandbox.AssemblyInfo.cs
+C:\Users\Emma\OneDrive\Documents\cse210-projects-ees\prove\scripture_memorization\obj\Debug\net7.0\Sandbox.csproj.CoreCompileInputs.cache
+C:\Users\Emma\OneDrive\Documents\cse210-projects-ees\prove\scripture_memorization\obj\Debug\net7.0\Sandbox.dll
+C:\Users\Emma\OneDrive\Documents\cse210-projects-ees\prove\scripture_memorization\obj\Debug\net7.0\refint\Sandbox.dll
+C:\Users\Emma\OneDrive\Documents\cse210-projects-ees\prove\scripture_memorization\obj\Debug\net7.0\Sandbox.pdb
