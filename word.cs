@@ -5,9 +5,20 @@ using System.Runtime.CompilerServices;
 using System.Security.Authentication.ExtendedProtection;
 
 class Word {
-    string JTPgivenWord = wordname
-    private wordbool = JTPSet_isDisplayable(JTPgivenWord);
-    public JTPSet_isDisplayable(wordname){
+    private string _JTPgivenWord;
+
+    private bool _isDisplayable;
+    //private bool wordbool = JTPSet_isDisplayable(JTPgivenWord);
+    
+    public Word(string word){
+        _JTPgivenWord = word;
+    }
+
+    public void Set_isDisplayable(bool chosenBoolean){
+        _isDisplayable = chosenBoolean;
+    }
+    
+    public void JTPSet_isDisplayable(wordname){
         if (JTPgivenWord==" ___ "){
             bool boolword= true;
         }
