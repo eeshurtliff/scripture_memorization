@@ -3,7 +3,7 @@ using System;
 class Scripture {
     private Reference _khreferenceinstance = new Reference();
 
-    public List<string> khVerse(string khGivenVerse) {
+    private List<string> khVerse(string khGivenVerse) {
         List<string> khVerseList = khGivenVerse.Split(" ").ToList();
         return khVerseList;
     }
