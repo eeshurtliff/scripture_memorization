@@ -15,7 +15,7 @@ class Program {
         // Create an instance of reference.
         Reference khMainScriptureReference = new Reference();
         
-        // Pass information to finished reference method here.
+        // Pass information to finished reference class method here.
 
         // Asking user for the scriptire passage.
         Console.Write("Enter the scripture passage (ex. 'And my father dwelt in a tent.'): ");
@@ -24,12 +24,14 @@ class Program {
         // Create an instance of scripture.
         Scripture khMainScripture = new Scripture();
         
-        // Pass information to finished scripture method here.
+        // Pass information to finished scripture class method here.
 
         // Ask the user for the number of words hidden each time they press enter.
         Console.Write("Specify the hidden word count for each memorization round. (ex. '3'): ");
         string khHiddenWordCount = Console.ReadLine();
 
-        // Pass information to finished Memorizer method here.
+        Memorizer khMainMemorizer = new Memorizer();
+
+        // Pass information to finished Memorizer class method here.
     }
 }
