@@ -7,14 +7,7 @@ class Memorizer {
     public Memorizer(){
         _eesNumToHide = 2;
     }
-    // Constructor to initialize the memorizer with a scripture
-    public Memorizer(string reference, string verses)
-    {
-        // Initialize the Scripture instance with the given reference and verses
-        eesScripture = new Scripture(reference, verses);
-        -eesHiddenWordIndex = new List<int>();
-    }
-    
+
     public Memorizer(int numToHide){
         _eesNumToHide = numToHide;
     }
@@ -29,16 +22,12 @@ class Memorizer {
         }
     }
 
-    public void ToString(){
+    public override string ToString(){
         foreach (word in Scripture.ToString()){
             Console.Write(Word.ToString());
         }
     }
-    public bool IsDone()
-    {
-        //gets return value from Scripture to check if there are words left
-        return _eesHiddenIndexes.Count == eesScripture.EesUpdateVerse().Count;
-    }
+    
 }
 
 
