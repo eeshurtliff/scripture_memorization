@@ -32,18 +32,14 @@ class Program {
         Console.WriteLine(khMainMemorizer.ToString());
 
         do{
-            Console.Write("Press the spacebar to continue: ");
-            ConsoleKeyInfo keyInfo = Console.ReadKey();
-            if (keyInfo.Key == ConsoleKey.Spacebar) {
-                Console.Clear();
-                khMainMemorizer.EesUpdateVerse();
-                Console.WriteLine(khMainMemorizer.ToString());
-                
-            }
+            Console.Write("Press enter to continue: ");
             string UserResponse = Console.ReadLine();
             if (UserResponse.ToLower() == "quit"){
                 break;
             }
+            Console.Clear();
+            khMainMemorizer.EesUpdateVerse();
+            Console.WriteLine(khMainMemorizer.ToString());
         }while (khMainMemorizer.IsDone() == false);
         Console.WriteLine("You have Finished! ");
 
