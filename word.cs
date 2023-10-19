@@ -14,6 +14,15 @@ class Word {
         _JTPgivenWord = word;
         _isDisplayable = true;
     }
+
+    public void Set_isDisplayable(bool chosenBoolean){
+        _isDisplayable = chosenBoolean;
+    }
+    
+
+   
+
+    
     public override string ToString()
     {
         if (_isDisplayable)
@@ -35,4 +44,5 @@ class Word {
     {
         return !_isDisplayable;
     }
+
 }
