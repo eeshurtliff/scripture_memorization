@@ -15,7 +15,7 @@ class Word {
         _isDisplayable = true;
     }
 
-    public void Set_isDisplayable(bool chosenBoolean){
+    public void SetIsDisplayable(bool chosenBoolean){
         _isDisplayable = chosenBoolean;
     }
     

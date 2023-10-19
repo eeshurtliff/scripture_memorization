@@ -2,19 +2,26 @@ using System;
 
 class Scripture {
     private Reference _khreferenceinstance = new Reference();
-
-    private List<string> khVerse(string khGivenVerse) {
-        List<string> khVerseList = khGivenVerse.Split(" ").ToList();
-        return khVerseList;
+    List<string> khVerseList;
+    private void khVerseToList(string khGivenVerse) {
+        List<string> khVerseList1 = khGivenVerse.Split(" ").ToList();
+        khVerseList = khVerseList1;
     }
 
-    public string khScriptureToString(string khReference, List<string> khVerse) {
+    // public string khScriptureToString(string khReference, List<string> khVerse) {
 
+    // }
+
+    public override string ToString()
+    {
+        //format print
+        return $"{_khreferenceinstance} - {string.Join(" ", khVerseList)}";
     }
+
 
     private string _khReferenceInstance;
     private string _khScripture;
-    private void Scripture(string khScripture, string khReference) {
+    public Scripture(string khReference, string khScripture) {
         _khReferenceInstance = khReference;
         _khScripture = khScripture;
     }

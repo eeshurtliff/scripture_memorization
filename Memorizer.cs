@@ -3,29 +3,44 @@ using System;
 class Memorizer {
     int _eesNumToHide;
     List<int> _eesHiddenIndexes = new List<int>();
-    Scripture eesScripture = new Scripture(string eesReference, string eesVerse );
+    // Scripture eesScripture = new Scripture(new Reference(eesReference), string eesVerse );
     public Memorizer(){
         _eesNumToHide = 2;
     }
 
-    public Memorizer(int numToHide){
-        _eesNumToHide = numToHide;
+    // public Memorizer(int numToHide){
+        // _eesNumToHide = numToHide;
+    // }
+    private Scripture LhScripture;
+
+    public Memorizer(string lhReference, string lhVerses, int ChooseHiddenNumber)
+    {
+        //creates a new instance of sripture verse to be used by memorizer
+        
+
+        LhScripture = new Scripture(lhReference, lhVerses);
+        _eesNumToHide = ChooseHiddenNumber;
+        // LhHiddenWordIndex = new List<int>();
     }
 
-    public void EesUpdateVerse(_eesNumToHide){
+
+    public void EesUpdateVerse(){
         Random eesRandom = new Random();
         List<string> eesVerse = Scripture.GetVerse();
         for (int i = 0; i < _eesNumToHide + 1; i++){
             int eesHideIndex = eesRandom.Next(eesVerse.Count);
-            Word.Set_isDisplayable(false);
+            Word.SetIsDisplayable(false);
             _eesHiddenIndexes.Add(eesHideIndex);
         }
     }
 
     public override string ToString(){
-        foreach (word in Scripture.ToString()){
-            Console.Write(Word.ToString());
-        }
+        return LhScripture;
+    }
+
+    public bool IsDone()
+    {
+        return LhHiddenWordIndex.Count == LhScripture.GetWords().Count;
     }
     
 }

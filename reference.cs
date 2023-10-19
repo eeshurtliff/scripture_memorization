@@ -2,7 +2,7 @@ using System;
 
 class Reference {
     private string _khreference;
-    public void khReference(string khScriptureReference) {
+    public Reference(string khScriptureReference) {
         _khreference = khScriptureReference;
     }
 

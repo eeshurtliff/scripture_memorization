@@ -13,7 +13,7 @@ class Program {
         string khReference = Console.ReadLine();
 
         // Create an instance of reference.
-        Reference khMainScriptureReference = new Reference();
+        // Reference khMainScriptureReference = new Reference();
         
         // Pass information to finished reference class method here.
 
@@ -22,7 +22,7 @@ class Program {
         string khPassage = Console.ReadLine();
 
         // Create an instance of scripture.
-        Scripture khMainScripture = new Scripture();
+        // Scripture khMainScripture = new Scripture();
         
         // Pass information to finished scripture class method here.
 
@@ -31,7 +31,7 @@ class Program {
         string khHiddenWordCount = Console.ReadLine();
         int khNumberHiddenWords = int.Parse(khHiddenWordCount);
 
-        Memorizer khMainMemorizer = new Memorizer(khNumberHiddenWords);
+        Memorizer khMainMemorizer = new Memorizer(khReference, khPassage, khNumberHiddenWords);
 
         // Pass information to finished Memorizer class method here.
     }
