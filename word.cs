@@ -19,6 +19,9 @@ class Word {
         _isDisplayable = chosenBoolean;
     }
     
+    public bool GetIsDisplayable(){
+        return _isDisplayable;
+    }
 
    
 

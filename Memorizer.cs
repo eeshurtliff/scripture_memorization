@@ -1,17 +1,16 @@
 using System;
+using System.ComponentModel;
 
 class Memorizer {
     int _eesNumToHide;
     List<int> _eesHiddenIndexes = new List<int>();
-    // Scripture eesScripture = new Scripture(new Reference(eesReference), string eesVerse );
+    
     public Memorizer(string lhReference, string lhVerses){
         _eesNumToHide = 2;
         LhScripture = new Scripture(lhReference, lhVerses);
     }
 
-    // public Memorizer(int numToHide){
-        // _eesNumToHide = numToHide;
-    // }
+    
     private Scripture LhScripture;
 
     public Memorizer(string lhReference, string lhVerses, int ChooseHiddenNumber)
@@ -29,11 +28,15 @@ class Memorizer {
         Random eesRandom = new Random();
         List<Word> myList = LhScripture.GetListWord();
         // List<string> eesVerse = Scripture.GetVerse();
-        for (int i = 0; i < _eesNumToHide + 1; i++){
+        for (int i = 0; i < _eesNumToHide; i++){
             int eesHideIndex = eesRandom.Next(myList.Count);
             Word WordIndex = myList[eesHideIndex];
             WordIndex.SetIsDisplayable(false);
+            if (_eesHiddenIndexes.Contains(eesHideIndex)){
+                continue;
+            }else{
             _eesHiddenIndexes.Add(eesHideIndex);
+            }
         }
     }
 
@@ -44,6 +47,8 @@ class Memorizer {
     public bool IsDone()
     {
         return _eesHiddenIndexes.Count == LhScripture.GetVerseList().Count;
+        
+        
     }
     
 }

@@ -5,16 +5,26 @@ class Scripture {
     string _khScripture;
     List<string> khVerseList;
 
-    List<Word> ListOfWordClass;
+    List<Word> ListOfWordClass = new List<Word>();
 
 
     public Scripture(string khReference, string khScripture) {
         _khReferenceInstance = khReference;
         _khScripture = khScripture;
+        List<string> _khVerse = khScripture.Split(" ").ToList();
+        khVerseList = _khVerse;
+        EesRemoveSpaces();
         CreateWordInstance();
         
 
     }
+
+    private void EesRemoveSpaces(){
+    khVerseList = khVerseList
+            .Where(word => !string.IsNullOrWhiteSpace(word))
+            .ToList();
+    }
+
     private void CreateWordInstance(){
         foreach (string e in khVerseList){
             Word word1 = new Word(e);
@@ -25,11 +35,11 @@ class Scripture {
     public List<Word> GetListWord(){
         return ListOfWordClass;
     }
-    private void khVerseToList(string khGivenVerse) {
-        List<string> khVerseList1 = khGivenVerse.Split(" ").ToList();
-        khVerseList = khVerseList1;
+    // private void KhVerseToList(string khGivenVerse) {
+    //     List<string> _khVerse = khGivenVerse.Split(" ").ToList();
+    //     khVerseList = _khVerse;
 
-    }
+    // }
 
     public List<string> GetVerseList(){
         return khVerseList;
@@ -42,7 +52,7 @@ class Scripture {
     public override string ToString()
     {
         //format print
-        return $"{_khReferenceInstance} - {string.Join(" ", khVerseList)}";
+        return $"{_khReferenceInstance} - {string.Join(" ", ListOfWordClass)}";
     }
 
 

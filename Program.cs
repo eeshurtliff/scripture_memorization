@@ -29,21 +29,23 @@ class Program {
         int khNumberHiddenWords = int.Parse(khHiddenWordCount);
 
         Memorizer khMainMemorizer = new Memorizer(khReference, khPassage, khNumberHiddenWords);
+        Console.WriteLine(khMainMemorizer.ToString());
 
         do{
-            khMainMemorizer.EesUpdateVerse();
-            Console.Clear();
-            khMainMemorizer.ToString();
             Console.Write("Press the spacebar to continue: ");
             ConsoleKeyInfo keyInfo = Console.ReadKey();
             if (keyInfo.Key == ConsoleKey.Spacebar) {
-                continue;
+                Console.Clear();
+                khMainMemorizer.EesUpdateVerse();
+                Console.WriteLine(khMainMemorizer.ToString());
+                
             }
             string UserResponse = Console.ReadLine();
             if (UserResponse.ToLower() == "quit"){
                 break;
             }
         }while (khMainMemorizer.IsDone() == false);
+        Console.WriteLine("You have Finished! ");
 
         // Pass information to finished Memorizer class method here.
     }
