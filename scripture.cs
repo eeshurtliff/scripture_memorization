@@ -8,8 +8,15 @@ class Scripture {
         return khVerseList;
     }
 
-    public void khScriptureToString(string khReference, List<string> khVerse) {
+    public string khScriptureToString(string khReference, List<string> khVerse) {
 
+    }
+
+    private string _khReferenceInstance;
+    private string _khScripture;
+    private void Scripture(string khScripture, string khReference) {
+        _khReferenceInstance = khReference;
+        _khScripture = khScripture;
     }
 
 }
