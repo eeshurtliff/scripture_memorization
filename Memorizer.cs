@@ -4,8 +4,9 @@ class Memorizer {
     int _eesNumToHide;
     List<int> _eesHiddenIndexes = new List<int>();
     // Scripture eesScripture = new Scripture(new Reference(eesReference), string eesVerse );
-    public Memorizer(){
+    public Memorizer(string lhReference, string lhVerses){
         _eesNumToHide = 2;
+        LhScripture = new Scripture(lhReference, lhVerses);
     }
 
     // public Memorizer(int numToHide){
@@ -26,21 +27,23 @@ class Memorizer {
 
     public void EesUpdateVerse(){
         Random eesRandom = new Random();
-        List<string> eesVerse = Scripture.GetVerse();
+        List<Word> myList = LhScripture.GetListWord();
+        // List<string> eesVerse = Scripture.GetVerse();
         for (int i = 0; i < _eesNumToHide + 1; i++){
-            int eesHideIndex = eesRandom.Next(eesVerse.Count);
-            Word.SetIsDisplayable(false);
+            int eesHideIndex = eesRandom.Next(myList.Count);
+            Word WordIndex = myList[eesHideIndex];
+            WordIndex.SetIsDisplayable(false);
             _eesHiddenIndexes.Add(eesHideIndex);
         }
     }
 
     public override string ToString(){
-        return LhScripture;
+        return LhScripture.ToString();
     }
 
     public bool IsDone()
     {
-        return LhHiddenWordIndex.Count == LhScripture.GetWords().Count;
+        return _eesHiddenIndexes.Count == LhScripture.GetVerseList().Count;
     }
     
 }

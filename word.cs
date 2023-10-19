@@ -33,6 +33,7 @@ class Word {
         {
             return new string('_', _JTPgivenWord.Length);
         }
+    
     }
     public void Hide()
     {

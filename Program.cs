@@ -12,8 +12,7 @@ class Program {
         Console.Write("Enter the reference of the scripture you want to memorize (ex. '1 Nephi 2:15'): ");
         string khReference = Console.ReadLine();
 
-        // Create an instance of reference.
-        // Reference khMainScriptureReference = new Reference();
+      
         
         // Pass information to finished reference class method here.
 
@@ -21,8 +20,6 @@ class Program {
         Console.Write("Enter the scripture passage (ex. 'And my father dwelt in a tent.'): ");
         string khPassage = Console.ReadLine();
 
-        // Create an instance of scripture.
-        // Scripture khMainScripture = new Scripture();
         
         // Pass information to finished scripture class method here.
 
@@ -32,6 +29,21 @@ class Program {
         int khNumberHiddenWords = int.Parse(khHiddenWordCount);
 
         Memorizer khMainMemorizer = new Memorizer(khReference, khPassage, khNumberHiddenWords);
+
+        do{
+            khMainMemorizer.EesUpdateVerse();
+            Console.Clear();
+            khMainMemorizer.ToString();
+            Console.Write("Press the spacebar to continue: ");
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+            if (keyInfo.Key == ConsoleKey.Spacebar) {
+                continue;
+            }
+            string UserResponse = Console.ReadLine();
+            if (UserResponse.ToLower() == "quit"){
+                break;
+            }
+        }while (khMainMemorizer.IsDone() == false);
 
         // Pass information to finished Memorizer class method here.
     }
