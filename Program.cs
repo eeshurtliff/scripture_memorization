@@ -1,3 +1,11 @@
+//Name: Scripture Memorizer
+//Purpose: This program will as the user to input a scripture reference and the scripture content, 
+//it will also ask for the number of words they want to remove at one time. The program will then randomly remove the specified
+//number of words each time the user presses enter until all the words are gone, then the program will end. The purpose is to provide the 
+//user with a tool for memorizing scriptures by slowly removing words.
+//Team: Lisa Heinhold, Kaden Hansen, Joshua Pyle, Emma Shurtliff, Adam Schwartz, and Olivia Smart.
+//Date: 10/21/2023
+
 using System;
 
 class Program {
@@ -28,19 +36,24 @@ class Program {
 
         // Pass information to finished Memorizer class method here.
         Memorizer khMainMemorizer = new Memorizer(khReference, khPassage, khNumberHiddenWords);
+        Console.Clear();
+        Console.Write("Commit this to memory: ");
         Console.WriteLine(khMainMemorizer.ToString());
 
         do{
-            Console.Write("Press enter to continue: ");
-            string UserResponse = Console.ReadLine();
-            if (UserResponse.ToLower() == "quit"){
+            Console.Write("Press any key to continue or 'q' to quit: ");
+            ConsoleKeyInfo khKeyInfo = Console.ReadKey(true); // Read a key without displaying it.
+            if (khKeyInfo.Key == ConsoleKey.Q){
                 break;
             }
-            Console.Clear();
-            khMainMemorizer.EesUpdateVerse();
-            Console.WriteLine(khMainMemorizer.ToString());
+            else {
+                Console.Clear();
+                khMainMemorizer.EesUpdateVerse();
+                Console.WriteLine("Commit this to memory: ");
+                Console.WriteLine(khMainMemorizer.ToString());
+            }
         }while (khMainMemorizer.IsDone() == false);
-        Console.WriteLine("You have Finished! ");
+        Console.WriteLine("The word(s) are gone! If you can't recite the scripture(s) from memory, don't be afraid to try again!");
 
     }
 }
