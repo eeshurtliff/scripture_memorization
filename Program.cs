@@ -53,7 +53,12 @@ class Program {
                 Console.WriteLine(khMainMemorizer.ToString());
             }
         }while (khMainMemorizer.IsDone() == false);
-        Console.WriteLine("The word(s) are gone! If you can't recite the scripture(s) from memory, don't be afraid to try again!");
+        if (khMainMemorizer.IsDone() == true) {
+            Console.WriteLine("\nThe word(s) are gone! If you can't recite the scripture(s) from memory, don't be afraid to try again!");
+        }
+        else {
+            Console.WriteLine("\nQuitting the program..");
+        }
 
     }
 }
