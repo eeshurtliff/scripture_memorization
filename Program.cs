@@ -37,7 +37,7 @@ class Program {
         // Pass information to finished Memorizer class method here.
         Memorizer khMainMemorizer = new Memorizer(khReference, khPassage, khNumberHiddenWords);
         Console.Clear();
-        Console.Write("Commit this to memory: ");
+        Console.Write("Commit this to memory: \n");
         Console.WriteLine(khMainMemorizer.ToString());
 
         do{
